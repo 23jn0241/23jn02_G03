@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>ゲームサイト</title>
+    <link href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/header/header.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+         
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .right {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links {
+            margin-right: 20px;
+        }
+        .button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            margin-left: 10px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .sort-dropdown {
+            margin: 10px 0;
+        }
+        .favorite-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .favorite-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            border: 1px solid #ccc; /* 枠の色 */
+            border-radius: 5px; /* 角の丸み */
+            padding: 10px; /* 内側の余白 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* シャドウ効果 */
+        }
+        .game-icon {
+            width: 50px; /* アイコンのサイズ */
+            height: 50px; /* アイコンのサイズ */
+            margin-right: 15px;
+        }
+        .game-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column; /* 縦に配置 */
+        }
+        .game-name {
+            font-weight: bold;
+        }
+        .delete-button {
+            background-color: #e74c3c; /* 削除ボタンの色 */
+        }
+        .delete-button:hover {
+            background-color: #c0392b; /* 削除ボタンのホバー色 */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ゲームサイト</h1>
+
+    <header>
+        <div class="nav-links">
+            <a href="home.html">ホーム</a> |
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/検索画面/search.html">検索</a> |
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/アカウント新規登録画面/user.html">新規登録</a> |
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/login画面/login.html">ログイン</a>
+        </div>
+
+        <div class="right">
+            <form action="index.php" method="get">
+                <input type="text" name="keyword" placeholder="検索キーワードを入力" value=""> 
+                <input type="submit" value="検索">
+            </form>
+        </div>
+    </header>
+
+    <div class="mypage">
+        <button class="button" onclick="location.href='/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/mypage画面/mypage.html'">マイページに戻る</button>
+    </div>
+
+    <h1>お気に入り一覧</h1>
+
+    <div class="sort-dropdown">
+        <label for="sort">ソート:</label>
+        <select id="sort">
+            <option value="name-asc">名前順（昇順）</option>
+            <option value="name-desc">名前順（降順）</option>
+            <option value="date-added">追加日順</option>
+        </select>
+    </div>
+
+    <div class="favorite-list">
+        <div class="favorite-item">
+            <img src="game-icon1.png" alt="ゲームアイコン" class="game-icon">
+            <div class="game-info">
+                <div class="game-name">ゲーム名1</div>
+                <div>その他の情報</div>
+            </div>
+            <button class="button delete-button">削除</button>
+        </div>
+        <div class="favorite-item">
+            <img src="game-icon2.png" alt="ゲームアイコン" class="game-icon">
+            <div class="game-info">
+                <div class="game-name">ゲーム名2</div>
+                <div>その他の情報</div>
+            </div>
+            <button class="button delete-button">削除</button>
+        </div>
+        <!-- さらにゲームを追加する場合は、ここに同様の構造を追加 -->
+    </div>
+
+</body>
+</html>
