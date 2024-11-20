@@ -1,0 +1,39 @@
+
+
+p {
+    margin-bottom: 20px;
+ 
+}
+
+.link-text {
+    text-align: center;
+    margin-top: 15px;
+}
+  
+.link-text p {
+    margin: 5px 0;
+    color: #007BFF;
+    cursor: pointer;
+}
+  
+.link-text p:hover {
+    text-decoration: underline;
+}
+
+.acount {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    
+    text-align: center;
+}
+
+
+
+link {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}

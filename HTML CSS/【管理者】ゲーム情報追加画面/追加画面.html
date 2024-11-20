@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゲーム情報追加</title>
+    <link href="追加画面.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>ゲーム情報追加</h1>
+    <div class="form-group">
+        <button class="button include-button" onclick="location.href='/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/管理者画面/管理者画面.html'">戻る</button>
+    </div> 
+    
+    <div class="form-container">
+        <div class="form-group">
+            <label for="game-name">ゲーム名:</label>
+            <input type="text" id="game-name" placeholder="ゲーム名を入力">
+        </div>
+        
+        <div class="form-group">
+            <label for="company-name">会社名:</label>
+            <input type="text" id="company-name" placeholder="会社名を入力">
+        </div>
+        
+        <div class="form-group">
+            <label for="game-info">ゲーム情報:</label>
+            <input type="text" id="game-info" placeholder="ゲーム情報を入力">
+        </div>
+
+        <div class="form-group">
+            <label for="package-image">パッケージ画像追加:</label>
+            <input type="file" id="package-image" accept="image/*">
+        </div>
+        
+        <div class="form-group">
+            <label for="images">画像追加:</label>
+            <input type="file" id="images" accept="image/*" multiple>
+        </div>
+
+        <div class="form-group">
+            <label for="images">画像追加:</label>
+            <input type="file" id="images" accept="image/*" multiple>
+        </div>
+
+        
+
+        <div class="form-group">
+            <label for="video-url">動画のURL追加:</label>
+            <input type="url" id="video-url" placeholder="動画のURLを入力">
+        </div>
+        
+        <div class="form-group">
+            <label>対応機種:</label>
+            <div class="button-group">
+                <button class="button">スマホ</button>
+                <button class="button">Switch</button>
+                <button class="button">PS4</button>
+                <button class="button">PS5</button>
+                <button class="button">PC</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>ジャンル:</label>
+            <div class="button-group">
+                <button class="button">RPG</button>
+                <button class="button">アクション</button>
+                <button class="button">パズル</button>
+                <button class="button">スポーツ</button>
+                <button class="button">シミュレーション</button>
+                <button class="button">音ゲー</button>
+                <button class="button">カードゲーム</button>
+                <button class="button">FPS</button>
+                <button class="button">アドベンチャー</button>
+                <button class="button">その他</button>
+            </div>
+        </div>
+
+        <div class="dropdown-group">
+            <label for="release-status">発売状況:</label>
+            <select id="release-status">
+                <option value="発売前">発売前</option>
+                <option value="発売中">発売中</option>
+                <option value="発売済み">発売済み</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button class="button large-button">追加</button> 
+        </div>
+    </div>
+
+</body>
+</html>

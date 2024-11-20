@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>ゲームサイト</title>
+    <link href="review.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <h1>ゲームサイト</h1>
+
+    <header>
+        
+        <div class="right">
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/home画面/home.html">ホーム</a> |
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/検索画面/search.html">検索</a> |
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/アカウント新規登録画面/user.html">新規登録</a> |
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/ログイン画面/login.html">ログイン</a>
+        </div>
+<br>
+<hr>
+        <div class="right">
+            <form action="index.php" method="get">
+                <input type="text" name="keyword" placeholder="検索キーワードを入力" value=""> 
+                <input type="submit" value="検索">
+                </form>
+            </form>
+        </div>
+        <br>
+        <hr>
+    </header>
+
+    <div class="right">
+        <button class="button" onclick="location.href='/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/マイページ/mypage.html'">マイページに戻る</button>
+    </div>
+    <div class="favorite2">
+         <h1>レビュー一覧</h1>
+    </div>
+   
+
+    <div class="sort-dropdown">
+        <label for="sort">ソート:</label>
+        <select id="sort">
+            <option value="name-asc">名前順（昇順）</option>
+            <option value="name-desc">名前順（降順）</option>
+            <option value="date-added">追加日順</option>
+        </select>
+    </div>
+
+    <div class="favorite-list">
+        <div class="favorite-item">
+            <img src="game-icon1.png" alt="ゲームアイコン" class="game-icon">
+            <div class="game-info">
+                <div class="game-name">ゲーム名1</div>
+                <div>その他の情報</div>
+            </div>
+            <button class="button delete-button">削除</button>
+        </div>
+        <div class="favorite-item">
+            <img src="game-icon2.png" alt="ゲームアイコン" class="game-icon">
+            <div class="game-info">
+                <div class="game-name">ゲーム名2</div>
+                <div>その他の情報</div>
+            </div>
+            <button class="button delete-button">削除</button>
+        </div>
+        <div class="favorite-item">
+          <img src="game-icon3.png" alt="ゲームアイコン" class="game-icon">
+          <div class="game-info">
+              <div class="game-name">ゲーム名2</div>
+              <div>その他の情報</div>
+          </div>
+          <button class="button delete-button">削除</button>
+      </div>
+        <!-- さらにゲームを追加する場合は、ここに同様の構造を追加 -->
+    </div>
+
+</body>
+</html>

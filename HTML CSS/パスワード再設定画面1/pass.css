@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.pass {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 20%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttons {
+    margin-bottom: 10px; 
+    margin-bottom: 50px; 
+}
+
+button {
+   
+    border-radius: 4px; /*角丸*/
+    cursor: pointer; /*???*/
+    width: 130px; /*ボタンの横幅*/
+    padding: 10px; /*ボタンの縦幅*/
+    box-sizing: border-box;  /*???*/
+    border: 0.1px solid white;  /*ボタンの枠*/
+
+}
+
+.cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.execute {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+

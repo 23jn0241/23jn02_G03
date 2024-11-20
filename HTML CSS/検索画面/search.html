@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="search.css" rel="stylesheet">
+</head>
+<body>
+    <h1>ゲームサイト</h1>
+
+    <header>
+        <link href="css/HeaderStyle.css" rel="stylesheet">
+        <div class="right">
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/home画面/home.html">ホーム</a>|
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/検索画面/search.html">検索</a>|
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/アカウント新規登録画面/user.html">新規登録</a>|
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/login画面/login.html">ログイン</a>
+        </div>
+        <br>
+        <hr>
+    </header>
+
+    <h2>ゲーム検索</h2>
+    <form action="W:\卒業制作\23JN02\3班作業フォルダ\HTML CSS\検索結果画面\searchans.html" method="POST">
+        <p>ゲーム名検索</p>
+        <input type="text" name="gamename" id="gamename">
+        
+        <p>会社名検索</p>
+        <input type="text" name="companyname" id="companyname">
+
+        <p>対応機種選択</p>
+        <input type="checkbox" name="phone" value="1" id="phone"> 
+        <label for="phone" class="label">スマホ</label> 
+        <input type="checkbox" name="switch" value="2" id="switch"> 
+        <label for="switch" class="label">Switch</label> 
+        <input type="checkbox" name="ps4" value="3" id="ps4"> 
+        <label for="ps4" class="label">PS4</label> 
+        <input type="checkbox" name="ps5" value="4" id="ps5"> 
+        <label for="ps5" class="label">PS5</label>
+        <input type="checkbox" name="pc" value="5" id="pc"> 
+        <label for="pc" class="label">PC</label>
+        <br><br><br><br><br><br><br>
+      
+        
+        <p>発売状況</p>
+        <input type="radio" name="release_status" value="onsale" id="onsale"> 
+        <label for="onsale" class="label">発売済み</label> 
+        <input type="radio" name="release_status" value="offsale" id="offsale"> 
+        <label for="offsale" class="label">未発売</label> 
+        <input type="radio" name="release_status" value="all" id="all"> 
+        <label for="all" class="label">すべて</label>
+        <br><br><br><br>
+        
+        <p>ジャンル選択</p>
+        <input type="checkbox" name="rpg" value="1" id="rpg"> 
+        <label for="rpg" class="label">RPG</label> 
+        <input type="checkbox" name="action" value="2" id="action"> 
+        <label for="action" class="label">アクション</label> 
+        <input type="checkbox" name="pzull" value="3" id="pzull"> 
+        <label for="pzull" class="label">パズル</label>
+        <input type="checkbox" name="sports" value="4" id="sports"> 
+        <label for="sports" class="label">スポーツ</label> 
+        <input type="checkbox" name="syumi" value="5" id="syumi"> 
+        <label for="syumi" class="label">シュミレーション</label>
+        <br> 
+        <input type="checkbox" name="oto" value="6" id="oto"> 
+        <label for="oto" class="label">音ゲー</label>
+        <input type="checkbox" name="card" value="7" id="card"> 
+        <label for="card" class="label">カードゲーム</label> 
+        <input type="checkbox" name="ado" value="8" id="ado"> 
+        <label for="ado" class="label">アドベンチャー</label> 
+        <input type="checkbox" name="fps" value="9" id="fps"> 
+        <label for="fps" class="label">FPS</label>
+        <input type="checkbox" name="etc" value="10" id="etc"> 
+        <label for="etc" class="label">その他</label> 
+        <br><br><br><br><br><br><br><br><br>
+        
+        <p>評価</p>
+        <select name="評価" required> 
+            <option value="" disabled>選択してください</option>
+            <option value="1">☆</option>
+            <option value="2">☆☆</option>
+            <option value="3">☆☆☆</option>
+            <option value="4">☆☆☆☆</option>
+            <option value="5">☆☆☆☆☆</option>
+        </select>
+
+        <p>並び替え</p>
+        <input type="radio" name="sort_order" value="hyouka" id="hyouka"> 
+        <label for="hyouka" class="label">評価順</label> 
+        <input type="radio" name="sort_order" value="new" id="new"> 
+        <label for="new" class="label">新着順</label> 
+        <input type="radio" name="sort_order" value="price" id="price"> 
+        <label for="price" class="label">価格順</label> 
+        <br><br><br>
+
+        <br>
+        <br>
+        <input type="submit" value="検索">
+        <input type="button" onclick="location.href='/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/検索画面/search.html'" value="クリア">
+    </form>
+</body>
+</html>

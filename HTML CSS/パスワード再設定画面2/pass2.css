@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.pass2 {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    line-height: 3;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 20%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input{
+    margin-bottom: 15px;
+}
+button {
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0.1px solid white;
+    cursor: pointer;
+}
+
+.back {
+    background-color: #f44336;
+    color: white;
+}
+
+.execute {
+    background-color: #4CAF50;
+    color: white;
+}

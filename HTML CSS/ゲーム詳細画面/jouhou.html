@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卒業制作</title>
+    <style>
+        .right{
+            float: right;
+        }
+        .clear{
+            clear: both;
+        }
+        .video{
+            text-align: center;
+            margin: 20px 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .stars {
+            display: flex;
+            justify-content: center; 
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .star {
+            font-size: 2rem;
+            color: lightgray;
+        }
+        .star.selected {
+            color: gold;
+        }
+        .review-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .box_head, .box_head2 {
+            width: 800px; 
+            margin: 3em auto; 
+            border: solid 2px #000000;
+            background-color: #ffffff;
+        }
+        p {
+            color: black;
+            text-align: center;
+        }
+        .box_head2 {
+            width: 500px;
+        }
+        .link {
+            margin: 20px 0; 
+            text-align: right;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+    <link href="home.css" rel="stylesheet">
+</head>
+<body>
+    <h1>ゲームサイト</h1>
+    
+    <header>
+        <link href="css/HeaderStyle.css" rel="stylesheet">
+        <div class="right">
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/home画面/home.html">ホーム</a>|
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/検索画面/search.html">検索</a>|
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/アカウント新規登録画面/user.html">新規登録</a>|
+            <a href="/卒業制作/23JN02/3班作業フォルダ/HTML%20CSS/ログイン画面/login.html">ログイン</a>
+        </div>
+    </header>
+    <br>
+    <hr>
+    
+    <h1>ゲームタイトル</h1>
+    <img src="https://images.app.goo.gl/MTY78LWaBLdjU4T96" alt="ちいかわ" width="600">
+    <h2>紹介文</h2>
+    <div class="box_head">
+        <p>ゲーム紹介文</p>
+        <p>「ちいかわ」のスマホアプリ！ちいかわの世界を楽しめるスマートフォンゲーム『ちいかわぽけっと』とは？
+            アプリボットから配信を予定している『ちいかわぽけっと』は、イラストレーター・ナガノ氏を原作とする人気漫画「ちいかわ」の世界観を楽しめるスマートフォンゲーム。
+            「ちいかわたちといつでもどこでも一緒」をコンセプトに、「ちいかわ」の世界観を感じられる遊びを詰め合わせたゲームになっているとのことだ。</p>
+    </div>
+    <h2>ゲーム情報（発売日、機種）</h2>
+    <div class="box_head2">
+        <p>ゲーム情報（発売日、機種）<br>
+            iPhone：未定<br>
+            Android：未定<br>
+            iPhone: 無料<br>
+            Android: 無料<br>
+        </p>
+    </div>
+    <h2>公式動画</h2>
+    <div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/91opqGCT4SM?si=ugHdqLhwFgBy63l9" 
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe></div>
+    <h2>ストア</h2>
+    <div class="box_head">
+        <p>ストア</p>
+        <p>データベース待ち</p>
+    </div>
+    <h2>評価</h2>
+    <h2>レビューを投稿する</h2>
+    <div class="stars" id="rating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+        
+    </div>
+    <p id="selected-rating">評価: まだ評価されていません。</p>
+    <div class="review-form">
+        <form id="reviewForm">
+            <label for="review">レビュー内容:</label>
+            <textarea id="review" name="review" required></textarea>
+            <button type="submit">送信</button>
+        </form>
+        <div id="reviewsList">
+            <h2>投稿されたレビュー:</h2>
+            <ul id="reviews"></ul>
+        </div>
+    </div>
+    <script>
+       
+        const stars = document.querySelectorAll('.star');
+        const selectedRating = document.getElementById('selected-rating');
+        let ratingValue = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                ratingValue = star.getAttribute('data-value');
+                stars.forEach(s => {
+                    s.classList.remove('selected');
+                });
+                for (let i = 0; i < ratingValue; i++) {
+                    stars[i].classList.add('selected');
+                }
+                selectedRating.textContent = `評価: ${ratingValue} / 5`;
+            });
+        });
+
+        
+        const form = document.getElementById('reviewForm');
+        const reviewsList = document.getElementById('reviews');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const reviewText = document.getElementById('review').value;
+
+            if (reviewText && ratingValue > 0) {
+                const li = document.createElement('li');
+                li.textContent = `評価: ${ratingValue} / 5 - ${reviewText}`;
+                reviewsList.appendChild(li);
+                document.getElementById('review').value = '';
+                ratingValue = 0;
+                selectedRating.textContent = '評価: まだ評価されていません。'; 
+                stars.forEach(s => s.classList.remove('selected')); 
+            }
+        });
+    </script>
+</body>
+</html>
